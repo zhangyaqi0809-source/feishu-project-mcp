@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "feishu-project": {
+      "url": "https://project.feishu.cn/mcp_server/v1"
+    },
+    "feishu-project-intl": {
+      "url": "https://meegle.com/mcp_server/v1"
+    }
+  }
+}

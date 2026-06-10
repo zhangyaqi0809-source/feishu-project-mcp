@@ -1,0 +1,40 @@
+# Smithery registry manifest
+# Submit via PR to: https://github.com/smithery-ai/registry
+startCommand:
+  type: http
+  configSchema:
+    type: object
+    properties:
+      region:
+        type: string
+        enum: ["cn", "intl"]
+        default: "cn"
+        description: "Service region — cn (project.feishu.cn) or intl (meegle.com)"
+  url: |
+    {{#if (eq config.region "intl")}}
+      https://meegle.com/mcp_server/v1
+    {{else}}
+      https://project.feishu.cn/mcp_server/v1
+    {{/if}}
+
+metadata:
+  name: feishu-project
+  display_name: Feishu Project (Meego)
+  description: |
+    Official MCP server for Feishu Project (Meego) — ByteDance's enterprise
+    project management platform. 50+ tools spanning work items, MQL search,
+    WBS plans, comments, work hours, and views. OAuth 2.1 with PKCE and
+    Dynamic Client Registration; no manual token configuration required.
+  homepage: https://project.feishu.cn
+  repository: https://github.com/larksuite/meegle-cli
+  license: MIT
+  categories:
+    - productivity
+    - project-management
+  keywords:
+    - feishu
+    - lark
+    - meego
+    - meegle
+    - project-management
+    - bytedance

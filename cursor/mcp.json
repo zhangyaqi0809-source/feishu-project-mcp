@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "feishu-project": {
+      "url": "https://project.feishu.cn/mcp_server/v1"
+    }
+  }
+}

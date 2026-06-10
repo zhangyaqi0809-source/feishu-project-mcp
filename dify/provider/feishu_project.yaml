@@ -1,0 +1,39 @@
+identity:
+  author: bytedance
+  name: feishu_project
+  label:
+    en_US: Feishu Project (Meego)
+    zh_Hans: 飞书项目
+  description:
+    en_US: Official Feishu Project MCP server. OAuth 2.0 with PKCE + Dynamic Client Registration — no manual token setup.
+    zh_Hans: 飞书项目官方 MCP Server。OAuth 2.0 + PKCE + 动态客户端注册,无需手工配置 token。
+  icon: icon.svg
+
+# Dify v1.6.0+ native MCP support — pure remote MCP, no local process
+provider_type: mcp
+
+mcp_server:
+  transport: streamable-http
+  url: "{{credentials.endpoint}}"
+  # OAuth metadata auto-discovered at:
+  #   {{endpoint_root}}/.well-known/oauth-protected-resource
+  #   {{endpoint_root}}/.well-known/oauth-authorization-server
+  # Dify performs Dynamic Client Registration + Authorization Code + PKCE flow automatically.
+
+credentials_for_provider:
+  endpoint:
+    type: select
+    required: true
+    default: "https://project.feishu.cn/mcp_server/v1"
+    label:
+      en_US: Service Region
+      zh_Hans: 服务区域
+    options:
+      - value: "https://project.feishu.cn/mcp_server/v1"
+        label:
+          en_US: China (project.feishu.cn)
+          zh_Hans: 国内 (project.feishu.cn)
+      - value: "https://meegle.com/mcp_server/v1"
+        label:
+          en_US: International (meegle.com)
+          zh_Hans: 海外 (meegle.com)

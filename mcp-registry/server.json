@@ -1,0 +1,23 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/registry/server.schema.json",
+  "name": "io.github.larksuite/feishu-project",
+  "description": "Official MCP server for Feishu Project (Meego) — ByteDance's enterprise project management platform. 50+ tools spanning work items, MQL search, WBS plans, comments, work hours, charts, views, attachments. OAuth 2.0 with PKCE + Dynamic Client Registration; zero manual configuration.",
+  "status": "active",
+  "repository": {
+    "url": "https://github.com/larksuite/meegle-cli",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://project.feishu.cn/mcp_server/v1",
+      "headers": []
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://meegle.com/mcp_server/v1",
+      "headers": []
+    }
+  ]
+}
