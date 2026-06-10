@@ -1,4 +1,4 @@
-# Feishu Project (Meego) MCP Server
+# Feishu Project (Meegle) MCP Server
 
 > Official MCP server endpoints, setup guides, and marketplace listings for **Feishu Project** (also known as **Meego** / **Meegle** / **Lark Project**) — ByteDance's enterprise project management platform.
 
